@@ -646,12 +646,12 @@
 
         async function inipesan() {
             var { value: nama } = await swals.fire({
-                title: 'Your name?',
-                nama :'swamedha',
+                title: 'Swamedha',
+                 
                 confirmButtonText: 'Continue',
                 showCancelButton: false,
             });
-            if (nama && nama.length < 11) {
+            if (nama && nama.length <0) {
                 window.nama = nama;
                 vketikhalo = "Hi Sahithi "+ " &#10084;";
                 await Swal.fire('Hi, sahithi ツ');
