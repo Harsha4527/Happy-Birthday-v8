@@ -642,23 +642,18 @@
 
         document.getElementById("kadoIn").onclick = function () { if (fungsiAwal == 0) { audio.play(); fungsiAwal = 1; kadoIn.style = "transition:all .30s ease;transform:scale(10);opacity:0"; wallpaper.style = "transform: scale(1.6);"; ket.style = "display:none"; setTimeout(initengahan, 500); setTimeout(inipesan, 500) } }
 
-        async function inipesan() {
-            var { value: nama } = await swals.fire({
-                title:  'Mubeena',
-                
-                confirmButtonText: 'Continue',
-                 
-            });
-            if{
-                 
-                vketikhalo = "Hi,  + Mubeena" + " &#10084;";
-                await swals.fire('Hi, + Mubeena' + ' ツ');
-                await swals.fire('It\'s your birthday today!');
-                await swals.fire('Happy birthday! 🎉');
-                await swals.fire('Wishing you a long and healthy life');
-                pilihwarna();
-            }  
-        }
+   async function inipesan() {
+  const nama = "Mubeena";
+
+  if (nama) {
+    let vketikhalo = "Hi, " + nama + " ❤️";
+    await Swal.fire('Hi, ' + nama + ' ツ');
+    await Swal.fire("It's your birthday today!");
+    await Swal.fire('Happy birthday! 🎉');
+    await Swal.fire('Wishing you a long and healthy life');
+    pilihwarna(); // make sure this function exists
+  }
+}
 
         async function pilihwarna() {
             var { isConfirmed: warna } = await swals.fire({
