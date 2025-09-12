@@ -645,27 +645,24 @@
         async function inipesan() {
             var { value: nama } = await swals.fire({
                 title:  'Mubeena',
-                 
+                
                 confirmButtonText: 'Continue',
                  
             });
-            if (nama && nama.length ) {
-                window.nama = nama;
+            if{
+                 
                 vketikhalo = "Hi,  + Mubeena" + " &#10084;";
                 await swals.fire('Hi, + Mubeena' + ' ツ');
                 await swals.fire('It\'s your birthday today!');
                 await swals.fire('Happy birthday! 🎉');
                 await swals.fire('Wishing you a long and healthy life');
                 pilihwarna();
-            } else {
-                await swals.fire('Oops!', 'Name cannot be empty or more than 10 characters!');
-                inipesan();
-            }
+            }  
         }
 
         async function pilihwarna() {
             var { isConfirmed: warna } = await swals.fire({
-                title: 'Oh, ' + nama + ', which color do you want to choose?',
+                title: 'Oh, Mubeena' , which color do you want to choose?',
                 text: 'Come on, don\'t hesitate :v',
                 showCancelButton: true,
                 confirmButtonText: 'Blue',
